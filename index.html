@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Hub - Your One-Stop Study Companion</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>📚 Students Hub</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="notes">Notes Library</a></li>
+                <li><a href="#" class="nav-link" data-page="feedback">Feedback</a></li>
+                <li><a href="#" class="nav-link" data-page="subscription">Subscription</a></li>
+                <li><a href="#" class="nav-link" data-page="about">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <section class="page active" id="home-page">
+            <div class="hero-section">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Your One-Stop Study Companion</h1>
+                        <p class="hero-subtitle">Access comprehensive study materials, notes, and resources to excel in your academic journey.</p>
+                        <div class="hero-actions">
+                            <button class="btn btn-primary" data-page="notes">Explore Notes</button>
+                            <button class="btn btn-secondary" data-page="subscription">Get Premium</button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="floating-card">
+                            <div class="card-icon">📖</div>
+                            <h3>10,000+</h3>
+                            <p>Study Materials</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <section class="features-section">
+                    <h2 class="section-title">Latest Notes</h2>
+                    <div class="notes-grid">
+                        <div class="note-card">
+                            <div class="note-icon">📊</div>
+                            <h3>Data Structures</h3>
+                            <p>Complete notes on arrays, linked lists, stacks, and queues</p>
+                            <span class="note-meta">Computer Science • 3rd Sem</span>
+                        </div>
+                        <div class="note-card">
+                            <div class="note-icon">⚡</div>
+                            <h3>Physics Mechanics</h3>
+                            <p>Fundamental concepts of motion, force, and energy</p>
+                            <span class="note-meta">Physics • 1st Sem</span>
+                        </div>
+                        <div class="note-card">
+                            <div class="note-icon">🧮</div>
+                            <h3>Calculus</h3>
+                            <p>Differential and integral calculus with solved examples</p>
+                            <span class="note-meta">Mathematics • 2nd Sem</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="subjects-section">
+                    <h2 class="section-title">Popular Subjects</h2>
+                    <div class="subjects-grid">
+                        <div class="subject-card">
+                            <div class="subject-icon">💻</div>
+                            <h3>Computer Science</h3>
+                            <p>450+ Materials</p>
+                        </div>
+                        <div class="subject-card">
+                            <div class="subject-icon">⚗️</div>
+                            <h3>Chemistry</h3>
+                            <p>320+ Materials</p>
+                        </div>
+                        <div class="subject-card">
+                            <div class="subject-icon">🔬</div>
+                            <h3>Physics</h3>
+                            <p>380+ Materials</p>
+                        </div>
+                        <div class="subject-card">
+                            <div class="subject-icon">📈</div>
+                            <h3>Mathematics</h3>
+                            <p>520+ Materials</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="how-it-works">
+                    <h2 class="section-title">How It Works</h2>
+                    <div class="steps-grid">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <h3>Browse</h3>
+                            <p>Explore our extensive library of study materials organized by semester and subject</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <h3>Preview</h3>
+                            <p>View and preview documents before downloading to ensure they meet your needs</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <h3>Study</h3>
+                            <p>Access high-quality notes and materials to enhance your learning experience</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Notes Library Page -->
+        <section class="page" id="notes-page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Notes Library</h1>
+                    <p>Explore our comprehensive collection of study materials</p>
+                </div>
+
+                <div class="library-controls">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search notes..." id="notes-search">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                    <div class="filter-tabs">
+                        <button class="tab-btn active" data-semester="all">All Semesters</button>
+                        <button class="tab-btn" data-semester="1">1st Sem</button>
+                        <button class="tab-btn" data-semester="2">2nd Sem</button>
+                        <button class="tab-btn" data-semester="3">3rd Sem</button>
+                        <button class="tab-btn" data-semester="4">4th Sem</button>
+                        <button class="tab-btn" data-semester="5">5th Sem</button>
+                        <button class="tab-btn" data-semester="6">6th Sem</button>
+                        <button class="tab-btn" data-semester="7">7th Sem</button>
+                        <button class="tab-btn" data-semester="8">8th Sem</button>
+                    </div>
+                </div>
+
+                <div class="notes-container">
+                    <div class="notes-list" id="notes-list">
+                        <!-- 1st Semester -->
+                        <div class="note-item" data-semester="1" data-subject="physics">
+                            <div class="note-info">
+                                <h3>Statistics - Chapter 1</h3>
+                                <p>Introduction to Statistics and Probability</p>
+                                <span class="note-tags">Physics • 1st Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="physics-mechanics.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="1" data-subject="math">
+                            <div class="note-info">
+                                <h3>Mathematics I - Basic Calculus</h3>
+                                <p>Limits, continuity and basic differentiation</p>
+                                <span class="note-tags">Mathematics • 1st Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="math-basic-calculus.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="1" data-subject="chemistry">
+                            <div class="note-info">
+                                <h3>Chemistry Fundamentals</h3>
+                                <p>Atomic structure and periodic table</p>
+                                <span class="note-tags">Chemistry • 1st Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="chemistry-fundamentals.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="1" data-subject="english">
+                            <div class="note-info">
+                                <h3>English Communication</h3>
+                                <p>Grammar, vocabulary and writing skills</p>
+                                <span class="note-tags">English • 1st Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="english-communication.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="1" data-subject="programming">
+                            <div class="note-info">
+                                <h3>Programming Fundamentals</h3>
+                                <p>Introduction to C programming language</p>
+                                <span class="note-tags">Programming • 1st Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="programming-fundamentals.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="1" data-subject="workshop">
+                            <div class="note-info">
+                                <h3>Workshop Technology</h3>
+                                <p>Basic engineering workshop practices</p>
+                                <span class="note-tags">Workshop • 1st Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="workshop-technology.pdf">Preview</button>
+                        </div>
+
+                        <!-- 2nd Semester -->
+                        <div class="note-item" data-semester="2" data-subject="math">
+                            <div class="note-info">
+                                <h3>Mathematics II - Advanced Calculus</h3>
+                                <p>Integration and differential equations</p>
+                                <span class="note-tags">Mathematics • 2nd Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="math-advanced-calculus.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="2" data-subject="physics">
+                            <div class="note-info">
+                                <h3>Physics II - Waves and Optics</h3>
+                                <p>Wave motion, sound and light</p>
+                                <span class="note-tags">Physics • 2nd Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="physics-waves-optics.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="2" data-subject="chemistry">
+                            <div class="note-info">
+                                <h3>Chemistry II - Organic Chemistry</h3>
+                                <p>Hydrocarbons and functional groups</p>
+                                <span class="note-tags">Chemistry • 2nd Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="chemistry-organic.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="2" data-subject="graphics">
+                            <div class="note-info">
+                                <h3>Engineering Graphics</h3>
+                                <p>Technical drawing and projections</p>
+                                <span class="note-tags">Graphics • 2nd Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="engineering-graphics.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="2" data-subject="programming">
+                            <div class="note-info">
+                                <h3>Object Oriented Programming</h3>
+                                <p>C++ programming concepts and applications</p>
+                                <span class="note-tags">Programming • 2nd Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="oop-cpp.pdf">Preview</button>
+                        </div>
+
+                        <!-- 3rd Semester -->
+                        <div class="note-item" data-semester="3" data-subject="math">
+                            <div class="note-info">
+                                <h3>Mathematics III - Linear Algebra</h3>
+                                <p>Matrices, vectors and eigenvalues</p>
+                                <span class="note-tags">Mathematics • 3rd Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="math-linear-algebra.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="3" data-subject="ds">
+                            <div class="note-info">
+                                <h3>Data Structures and Algorithms</h3>
+                                <p>Arrays, linked lists, stacks and queues</p>
+                                <span class="note-tags">Computer Science • 3rd Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="data-structures.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="3" data-subject="electronics">
+                            <div class="note-info">
+                                <h3>Electronics Engineering</h3>
+                                <p>Circuit analysis and electronic devices</p>
+                                <span class="note-tags">Electronics • 3rd Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="electronics-engineering.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="3" data-subject="mechanics">
+                            <div class="note-info">
+                                <h3>Engineering Mechanics</h3>
+                                <p>Statics and dynamics of rigid bodies</p>
+                                <span class="note-tags">Mechanics • 3rd Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="engineering-mechanics.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="3" data-subject="thermodynamics">
+                            <div class="note-info">
+                                <h3>Thermodynamics</h3>
+                                <p>Laws of thermodynamics and heat engines</p>
+                                <span class="note-tags">Thermodynamics • 3rd Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="thermodynamics.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="3" data-subject="materials">
+                            <div class="note-info">
+                                <h3>Engineering Materials</h3>
+                                <p>Properties and applications of materials</p>
+                                <span class="note-tags">Materials • 3rd Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="engineering-materials.pdf">Preview</button>
+                        </div>
+
+                        <!-- 4th Semester -->
+                        <div class="note-item" data-semester="4" data-subject="math">
+                            <div class="note-info">
+                                <h3>Mathematics IV - Numerical Methods</h3>
+                                <p>Numerical analysis and computational methods</p>
+                                <span class="note-tags">Mathematics • 4th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="math-numerical-methods.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="4" data-subject="dbms">
+                            <div class="note-info">
+                                <h3>Database Management System</h3>
+                                <p>SQL, normalization and database design</p>
+                                <span class="note-tags">Computer Science • 4th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="dbms.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="4" data-subject="microprocessor">
+                            <div class="note-info">
+                                <h3>Microprocessor and Assembly</h3>
+                                <p>8085/8086 microprocessor programming</p>
+                                <span class="note-tags">Computer Science • 4th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="microprocessor.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="4" data-subject="theory">
+                            <div class="note-info">
+                                <h3>Theory of Computation</h3>
+                                <p>Automata, grammars and complexity theory</p>
+                                <span class="note-tags">Computer Science • 4th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="theory-computation.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="4" data-subject="statistics">
+                            <div class="note-info">
+                                <h3>Statistics and Probability</h3>
+                                <p>Statistical analysis and probability distributions</p>
+                                <span class="note-tags">Statistics • 4th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="statistics-probability.pdf">Preview</button>
+                        </div>
+
+                        <!-- 5th Semester -->
+                        <div class="note-item" data-semester="5" data-subject="os">
+                            <div class="note-info">
+                                <h3>Operating Systems</h3>
+                                <p>Process management, memory and file systems</p>
+                                <span class="note-tags">Computer Science • 5th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="operating-systems.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="5" data-subject="networks">
+                            <div class="note-info">
+                                <h3>Computer Networks</h3>
+                                <p>Network protocols, TCP/IP and OSI model</p>
+                                <span class="note-tags">Computer Science • 5th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="computer-networks.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="5" data-subject="compiler">
+                            <div class="note-info">
+                                <h3>Compiler Design</h3>
+                                <p>Lexical analysis, parsing and code generation</p>
+                                <span class="note-tags">Computer Science • 5th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="compiler-design.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="5" data-subject="ai">
+                            <div class="note-info">
+                                <h3>Artificial Intelligence</h3>
+                                <p>Search algorithms, knowledge representation</p>
+                                <span class="note-tags">Computer Science • 5th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="artificial-intelligence.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="5" data-subject="web">
+                            <div class="note-info">
+                                <h3>Web Technology</h3>
+                                <p>HTML, CSS, JavaScript and web frameworks</p>
+                                <span class="note-tags">Computer Science • 5th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="web-technology.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="5" data-subject="economics">
+                            <div class="note-info">
+                                <h3>Engineering Economics</h3>
+                                <p>Economic analysis and project evaluation</p>
+                                <span class="note-tags">Economics • 5th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="engineering-economics.pdf">Preview</button>
+                        </div>
+
+                        <!-- 6th Semester -->
+                        <div class="note-item" data-semester="6" data-subject="software">
+                            <div class="note-info">
+                                <h3>Software Engineering</h3>
+                                <p>SDLC, testing and project management</p>
+                                <span class="note-tags">Computer Science • 6th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="software-engineering.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="6" data-subject="graphics">
+                            <div class="note-info">
+                                <h3>Computer Graphics</h3>
+                                <p>2D/3D transformations and rendering</p>
+                                <span class="note-tags">Computer Science • 6th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="computer-graphics.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="6" data-subject="mobile">
+                            <div class="note-info">
+                                <h3>Mobile Application Development</h3>
+                                <p>Android and iOS app development</p>
+                                <span class="note-tags">Computer Science • 6th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="mobile-app-dev.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="6" data-subject="security">
+                            <div class="note-info">
+                                <h3>Information Security</h3>
+                                <p>Cryptography, network security and ethical hacking</p>
+                                <span class="note-tags">Computer Science • 6th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="information-security.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="6" data-subject="simulation">
+                            <div class="note-info">
+                                <h3>Simulation and Modeling</h3>
+                                <p>Monte Carlo methods and system modeling</p>
+                                <span class="note-tags">Computer Science • 6th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="simulation-modeling.pdf">Preview</button>
+                        </div>
+
+                        <!-- 7th Semester -->
+                        <div class="note-item" data-semester="7" data-subject="ml">
+                            <div class="note-info">
+                                <h3>Machine Learning</h3>
+                                <p>Supervised and unsupervised learning algorithms</p>
+                                <span class="note-tags">Computer Science • 7th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="machine-learning.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="7" data-subject="distributed">
+                            <div class="note-info">
+                                <h3>Distributed Systems</h3>
+                                <p>Distributed computing and cloud technologies</p>
+                                <span class="note-tags">Computer Science • 7th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="distributed-systems.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="7" data-subject="bigdata">
+                            <div class="note-info">
+                                <h3>Big Data Analytics</h3>
+                                <p>Hadoop, Spark and data processing techniques</p>
+                                <span class="note-tags">Computer Science • 7th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="big-data-analytics.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="7" data-subject="blockchain">
+                            <div class="note-info">
+                                <h3>Blockchain Technology</h3>
+                                <p>Cryptocurrency, smart contracts and DApps</p>
+                                <span class="note-tags">Computer Science • 7th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="blockchain-technology.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="7" data-subject="iot">
+                            <div class="note-info">
+                                <h3>Internet of Things</h3>
+                                <p>IoT architecture, sensors and connectivity</p>
+                                <span class="note-tags">Computer Science • 7th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="internet-of-things.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="7" data-subject="project">
+                            <div class="note-info">
+                                <h3>Major Project I</h3>
+                                <p>Project planning and initial development</p>
+                                <span class="note-tags">Project • 7th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="major-project-1.pdf">Preview</button>
+                        </div>
+
+                        <!-- 8th Semester -->
+                        <div class="note-item" data-semester="8" data-subject="internship">
+                            <div class="note-info">
+                                <h3>Internship Report</h3>
+                                <p>Industry experience and practical learning</p>
+                                <span class="note-tags">Internship • 8th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="internship-report.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="8" data-subject="project">
+                            <div class="note-info">
+                                <h3>Major Project II</h3>
+                                <p>Final project implementation and documentation</p>
+                                <span class="note-tags">Project • 8th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="major-project-2.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="8" data-subject="professional">
+                            <div class="note-info">
+                                <h3>Professional Practice</h3>
+                                <p>Ethics, communication and leadership skills</p>
+                                <span class="note-tags">Professional • 8th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="professional-practice.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="8" data-subject="elective1">
+                            <div class="note-info">
+                                <h3>Advanced Database Systems</h3>
+                                <p>NoSQL, data warehousing and mining</p>
+                                <span class="note-tags">Elective • 8th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="advanced-database.pdf">Preview</button>
+                        </div>
+                        <div class="note-item" data-semester="8" data-subject="elective2">
+                            <div class="note-info">
+                                <h3>Digital Image Processing</h3>
+                                <p>Image enhancement and computer vision</p>
+                                <span class="note-tags">Elective • 8th Sem • PDF</span>
+                            </div>
+                            <button class="btn btn-outline preview-btn" data-pdf="digital-image-processing.pdf">Preview</button>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="pdf-preview" id="pdf-preview">
+                        <div class="preview-header">
+                            <h3 id="preview-title">Document Preview</h3>
+                            <button class="close-preview" id="close-preview">✕</button>
+                        </div>
+                        <div class="preview-content">
+                            <div class="pdf-placeholder">
+                                <div class="pdf-icon">📄</div>
+                                <p>PDF preview would be displayed here</p>
+                                <small>In a real application, this would show an embedded PDF viewer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feedback Page -->
+        <section class="page" id="feedback-page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Feedback</h1>
+                    <p>Help us improve by sharing your thoughts and suggestions</p>
+                </div>
+
+                <div class="feedback-container">
+                    <form class="feedback-form" id="feedback-form">
+                        <div class="form-group">
+                            <label for="feedback-name">Full Name</label>
+                            <input type="text" id="feedback-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback-email">Email Address</label>
+                            <input type="email" id="feedback-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="material-name">Material Name (Optional)</label>
+                            <input type="text" id="material-name" name="materialName">
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback-message">Your Feedback</label>
+                            <textarea id="feedback-message" name="message" rows="5" required placeholder="Share your thoughts, suggestions, or report any issues..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Rate Your Experience</label>
+                            <div class="rating-stars" id="rating-stars">
+                                <span class="star" data-rating="1">⭐</span>
+                                <span class="star" data-rating="2">⭐</span>
+                                <span class="star" data-rating="3">⭐</span>
+                                <span class="star" data-rating="4">⭐</span>
+                                <span class="star" data-rating="5">⭐</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                    </form>
+
+                    <div class="feedback-stats">
+                        <h3>Recent Feedback</h3>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-number">4.8</div>
+                                <div class="stat-label">Average Rating</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">1,247</div>
+                                <div class="stat-label">Total Reviews</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">Satisfaction Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subscription Page -->
+        <section class="page" id="subscription-page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Choose Your Plan</h1>
+                    <p>Unlock premium features and get unlimited access to all study materials</p>
+                </div>
+
+                <div class="pricing-container">
+                    <div class="pricing-card">
+                        <div class="plan-header">
+                            <h3>Free</h3>
+                            <div class="price">
+                                <span class="currency">Rs.</span>
+                                <span class="amount">0</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>✅ Access to basic notes</li>
+                            <li>✅ 5 downloads per month</li>
+                            <li>✅ Standard support</li>
+                            <li>❌ Premium materials</li>
+                            <li>❌ Offline access</li>
+                        </ul>
+                        <button class="btn btn-outline">Current Plan</button>
+                    </div>
+
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="plan-header">
+                            <h3>Premium</h3>
+                            <div class="price">
+                                <span class="currency">Rs.</span>
+                                <span class="amount">499</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>✅ Access to all notes</li>
+                            <li>✅ Unlimited downloads</li>
+                            <li>✅ Priority support</li>
+                            <li>✅ Premium materials</li>
+                            <li>✅ Offline access</li>
+                            <li>✅ Video tutorials</li>
+                            <li>✅ Mock tests</li>
+                        </ul>
+                        <button class="btn btn-primary" id="subscribe-btn">Subscribe Now</button>
+                    </div>
+                </div>
+
+                <div class="payment-section" id="payment-section" style="display: none;">
+                    <h3>Payment Details</h3>
+                    <div class="payment-methods">
+                        <h4>Select Payment Method</h4>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="khalti" checked>
+                                <div class="payment-card">
+                                    <img src="https://khalti.com/static/img/logo1.png" alt="Khalti" width="80">
+                                    <span>Khalti</span>
+                                </div>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="esewa">
+                                <div class="payment-card">
+                                    <div class="esewa-logo">eSewa</div>
+                                    <span>eSewa</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <form class="payment-form">
+                        <div class="form-group">
+                            <label>Amount</label>
+                            <input type="text" value="Rs. 499" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile Number</label>
+                            <input type="tel" placeholder="98XXXXXXXX" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Proceed to Payment</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Contact Page -->
+        <section class="page" id="about-page">
+            <div class="container">
+                <div class="about-hero">
+                    <h1>About Students Hub</h1>
+                    <p class="about-subtitle">Empowering students with quality education resources</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-section">
+                        <h2>Our Mission</h2>
+                        <p>Students Hub is dedicated to democratizing education by providing easy access to high-quality study materials, notes, and educational resources. We believe every student deserves the tools they need to succeed in their academic journey.</p>
+                        
+                        <div class="mission-cards">
+                            <div class="mission-card">
+                                <div class="mission-icon">🎯</div>
+                                <h3>Quality Content</h3>
+                                <p>Curated materials from experienced educators and subject matter experts</p>
+                            </div>
+                            <div class="mission-card">
+                                <div class="mission-icon">🌍</div>
+                                <h3>Accessibility</h3>
+                                <p>Making education resources available to students everywhere, anytime</p>
+                            </div>
+                            <div class="mission-card">
+                                <div class="mission-icon">🤝</div>
+                                <h3>Community</h3>
+                                <p>Building a supportive learning community for academic success</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-section">
+                        <h2>Contact Us</h2>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>support@studentshub.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📞</div>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>+977-1-XXXXXXX</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div>
+                                    <h4>Address</h4>
+                                    <p>Kathmandu, Nepal</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <h4>Follow Us</h4>
+                            <div class="social-icons">
+                                <a href="#" class="social-link">📘 Facebook</a>
+                                <a href="#" class="social-link">🐦 Twitter</a>
+                                <a href="#" class="social-link">📷 Instagram</a>
+                                <a href="#" class="social-link">💼 LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <span class="toast-message">Message sent successfully!</span>
+            <button class="toast-close">✕</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/navigation.js"></script>
+    <script type="module" src="js/features.js"></script>
+    <script type="module" src="js/main.js"></script>
