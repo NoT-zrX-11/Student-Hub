@@ -769,6 +769,29 @@
                 </div>
             </div>
         </section>
+
+        <!-- Floating Info Icon -->
+        <div class="info-icon" onclick="toggleInfo()">ℹ️</div>
+
+         <!-- Hidden Info Box -->
+        <div class="info-box" id="infoBox">
+            <h3>About This Project</h3>
+
+             <p>👥 <strong>Founders:</strong></p>
+              <ul>
+                 <li><span class="founder">ADITYA POUDEL</span></li>
+                 <li><span class="founder">AASHISH PANDEY</span></li>
+              </ul>
+
+              <p>🛠️ <strong>Softwares Used:</strong></p>
+         <ul>
+             <li><span class="tool">Visual Studio Code</span></li>
+             <li><span class="tool">Figma</span></li> 
+             <li><span class="tool">Photoshop</span></li>
+             <li><span class="tool">GitHub</span></li>
+         </ul>
+        </div>
+
     </main>
 
     <!-- Toast Notification -->
@@ -782,3 +805,10 @@
     <script type="module" src="js/navigation.js"></script>
     <script type="module" src="js/features.js"></script>
     <script type="module" src="js/main.js"></script>
+<script>
+  function toggleInfo() {
+    const box = document.getElementById("infoBox");
+    box.classList.toggle("show");
+  }
+</script>
+

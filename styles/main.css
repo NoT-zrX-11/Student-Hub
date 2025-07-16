@@ -333,3 +333,102 @@ p {
 .slide-in {
     animation: slideIn 0.3s ease-out;
 }
+/* Floating Icon */
+.info-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  background: #007bff;
+  color: white;
+  padding: 14px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+.info-icon:hover {
+  background: #0056b3;
+}
+
+/* Info Box */
+.info-box {
+  position: fixed;
+  bottom: 70px; /* So it's just above the icon */
+  right: 20px;  /* Exactly aligned with the icon */
+  width: 300px;
+  background: linear-gradient(135deg, #f1f8ff, #e6f0ff);
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 20px;
+  display: none;
+  z-index: 999;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Folded Corner */
+.info-box::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  right: 15px;
+  width: 25px;
+  height: 15px;
+  background: #007bff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  transform: perspective(50px) rotateX(10deg);
+}
+
+.info-box h3 {
+  margin-top: 0;
+  color: #0056b3;
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.info-box p {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.info-box ul {
+  padding-left: 20px;
+  margin: 0 0 10px;
+}
+
+.info-box ul li {
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.info-box ul li::before {
+  content: "✔ ";
+  color: #007bff;
+}
+
+.founder {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+.tool {
+  color: #00509e;
+  font-weight: bold;
+}
+
+.info-box.show {
+  display: block;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
