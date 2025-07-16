@@ -1,4 +1,4 @@
-# 📚 Hamro CSIT Study Hub
+# 📚 STUDENTS HUB--A only Place To LEARN
 
 Welcome to **Hamro CSIT Study Hub** – a lightweight and responsive educational website created using **HTML, CSS, and JavaScript**. This platform is designed to support **BSc CSIT students in Nepal** by providing categorized notes, study materials, and feedback features.
 
