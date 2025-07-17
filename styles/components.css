@@ -209,7 +209,9 @@
     color: var(--text-muted);
     margin-top: var(--space-2);
 }
-
+.note-card{
+    text-decoration:wavy;
+}
 /* Steps Grid */
 .steps-grid {
     display: grid;
