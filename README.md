@@ -27,3 +27,11 @@ Welcome to **Hamro CSIT Study Hub** – a lightweight and responsive educational
 
 ## 🚀 Getting Started
 
+
+## License & Copyright
+
+© 2025 Aditya Poudel & Aashish Pandey  
+This project is protected under All Rights Reserved.  
+Unauthorized copying or reuse of any files is strictly prohibited.
+
+
